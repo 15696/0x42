@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "0x42"
+version = "0.1.0"
+description = "A bot"
+authors = ["andy"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+"discord.py" = {git = "https://github.com/Rapptz/discord.py.git"}
+PyYAML = "^5.4.1"
+asyncpg = "^0.24.0"
+uvloop = "^0.16.0"
+jishaku = "^2.2.0"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^3.9.2"
+black = "^21.7b0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
