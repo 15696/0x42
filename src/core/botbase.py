@@ -54,11 +54,11 @@ class _0x42(commands.Bot):
             str(self.config["BOT"]["prefix"]),
         )
 
-    async def on_ready(self) -> None:
-        print("[0x42] Bot is ready")
-
     async def on_guild_remove(self, guild: discord.Guild) -> str:
         return await self.database.execute("DELETE FROM guilds WHERE id = $1", guild.id)
+
+    async def on_ready(self) -> None:
+        print("[0x42] Bot is ready")
 
     def run(self, *args, **kwargs) -> None:
         for ext in [
